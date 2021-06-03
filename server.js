@@ -53,4 +53,6 @@ app.post("/v2/posts", (req, res) => {
 });
 
 // listener
-app.listen(port, () => console.log(`listening on localhost:${port}`));
+app.listen(process.env.PORT || port, () =>
+  console.log(`listening on localhost:${port}`)
+);
